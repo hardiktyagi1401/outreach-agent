@@ -37,4 +37,6 @@ def research_lead():
     })
 
 
-app.run(port=8080, debug=True)
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 8080))
+    app.run(port=port, debug=False)
